@@ -1,4 +1,15 @@
-// reversing an array
+//  Find the minimum //
+
+function min(a, b) {
+    if (a < b) return a;
+    else return b;
+  }
+  
+  console.log(min(0, 10));
+  // 0
+
+
+// Reversing an array //
 
 function reverseArray(a) {
     let output = [];
@@ -8,14 +19,36 @@ function reverseArray(a) {
     return output;
   }
   
-  function reverseArrayInPlace(a) {
-    for (let i = 0; i < Math.floor(a.length / 2); i++) {
-      let old = a[i];
-      a[i] = a[a.length - 1 - i];
-      a[a.length - 1 - i] = old;
-    }
-    return a;
-  }
-  
   console.log(reverseArray(["Cat", "In", "The", "Hat"]));
   // [ 'Hat', 'The', 'In', 'Cat' 
+
+// Cheesboard
+
+let boardSize = 10;
+
+let board = "";
+
+for (let y = 0; y < boardSize; y++) {
+  for (let x = 0; x < boardSize; x++) {
+    if ((x + y) % 2 == 0) {
+      board += " ";
+    } else {
+      board += "#";
+    }
+  }
+  board += "\n";
+}
+
+console.log(board);
+/* # # # # #
+  # # # # # 
+ # # # # #
+  # # # # # 
+ # # # # #
+  # # # # # 
+ # # # # #
+  # # # # # 
+ # # # # #
+  # # # # # 
+*/
+
